@@ -3,17 +3,8 @@
     <HeaderDiv />
   </div>
 </template>
-<script>
+<script setup>
 import HeaderDiv from './components/HeaderDiv.vue';
-export default {
-  components: {
-    HeaderDiv,
-  },
-  data() {
-    return {};
-  },
-  methods: {},
-};
 </script>
 
 <style></style>
