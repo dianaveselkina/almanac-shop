@@ -1,7 +1,10 @@
 <template>
   <div class="header">
     <div class="container">
-      <img src="/img/logo.png" alt="logo" />
+      <div class="header__logo">
+        <img src="/img/logo.png" alt="logo" />
+        <h1 class="header__title">almanac-shop</h1>
+      </div>
       <input />
       <div class="header__icon">
         <img class="header__img" src="/img/like_icon.png" alt="like_icon" />
@@ -22,16 +25,28 @@
   align-items: center;
   padding: 1rem 3rem;
 }
+.header__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
 img {
   width: 8rem;
   height: 8rem;
+}
+.header__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #63625d;
 }
 .header__img {
   width: 2rem;
   height: 2rem;
 }
 input {
-  width: 40rem;
+  width: clamp(9rem, 50%, 60rem);
+  margin: 0 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
 }
