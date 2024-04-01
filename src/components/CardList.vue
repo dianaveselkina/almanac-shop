@@ -6,7 +6,12 @@ import CardDiv from './CardDiv.vue';
     <div class="container">
       <h1>Каталог календарей</h1>
       <div class="goods__card">
-        <CardDiv />
+        <CardDiv
+          imageUrl="/img/rose.jpg "
+          :price="200"
+          :isAdded="true"
+          :isFavorite="true"
+        />
         <CardDiv />
         <CardDiv />
         <CardDiv />

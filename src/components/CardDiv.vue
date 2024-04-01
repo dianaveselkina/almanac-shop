@@ -1,14 +1,30 @@
+<script setup>
+defineProps({
+  imageUrl: String,
+  price: Number,
+  isFavorite: Boolean,
+  isAdded: Boolean,
+});
+</script>
 <template>
   <div class="card">
     <div class="card__like">
-      <img class="card__icon" src="/img/like_icon.png" alt="like_icon" />
+      <img
+        class="card__icon"
+        :src="isFavorite ? '/img/like_icon.png' : '/img/like1_icon.png'"
+        alt="basket_icon"
+      />
     </div>
     <div class="card__image">
-      <img class="card__img" src="/img/rose.jpg" alt="rose" />
+      <img class="card__img" :src="imageUrl" alt="rose" />
     </div>
     <div class="card__price">
-      <p>200р</p>
-      <img class="card__icon" src="/img/basket_icon.png" alt="basket_icon" />
+      <p>{{ price }}</p>
+      <img
+        class="card__icon"
+        :src="isAdded ? '/img/basket_icon.png' : '/img/basket1_icon.png'"
+        alt="basket_icon"
+      />
     </div>
   </div>
 </template>
