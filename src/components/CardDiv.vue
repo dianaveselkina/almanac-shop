@@ -18,12 +18,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: clamp(7rem, 20%, 20rem);
-  height: 18rem;
-  border: solid 1px #63625d;
+  width: clamp(18rem, 20%, 20rem);
+  height: 24rem;
+  border: solid 3px #63625d;
   border-radius: 1rem;
   padding: 1rem 1.5rem;
   gap: 1rem;
+}
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 13px 4px #63625d;
 }
 .card__like {
   display: flex;
