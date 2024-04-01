@@ -4,6 +4,8 @@ defineProps({
   price: Number,
   isFavorite: Boolean,
   isAdded: Boolean,
+  onClickAdd: Function,
+  onClickFavorite: Function,
 });
 </script>
 <template>
@@ -13,6 +15,7 @@ defineProps({
         class="card__icon"
         :src="isFavorite ? '/img/like_icon.png' : '/img/like1_icon.png'"
         alt="basket_icon"
+        @click="onClickFavorite"
       />
     </div>
     <div class="card__image">
@@ -24,6 +27,7 @@ defineProps({
         class="card__icon"
         :src="isAdded ? '/img/basket_icon.png' : '/img/basket1_icon.png'"
         alt="basket_icon"
+        @click="onClickAdd"
       />
     </div>
   </div>
@@ -44,6 +48,7 @@ defineProps({
 .card:hover {
   cursor: pointer;
   box-shadow: 0px 0px 13px 4px #63625d;
+  transform: translateY(-0.5rem);
 }
 .card__like {
   display: flex;

@@ -1,5 +1,8 @@
 <script setup>
 import CardDiv from './CardDiv.vue';
+const onClickAdd = () => {
+  alert('Добавить');
+};
 </script>
 <template>
   <div class="goods">
@@ -11,6 +14,7 @@ import CardDiv from './CardDiv.vue';
           :price="200"
           :isAdded="true"
           :isFavorite="true"
+          :onClickAdd="onClickAdd"
         />
         <CardDiv />
         <CardDiv />
