@@ -54,4 +54,7 @@ input {
   display: flex;
   gap: 3rem;
 }
+.header__icon:hover {
+  cursor: pointer;
+}
 </style>
